@@ -1,2 +1,3 @@
 # oneway
-A shipping estimation calculator
+
+A shipping cost estimation calculator

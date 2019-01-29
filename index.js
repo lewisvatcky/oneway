@@ -1,7 +1,16 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+import dotenv from "dotenv";
+import express from "express";
+import bodyParser from "body-parser";
+import Calculator from "./Calculator";
 
-app.get("/", (req, res) => res.send("Hello World!"));
+dotenv.config();
+
+export const app = express();
+
+const port = 8080;
+
+app.use(bodyParser.json());
 
 app.listen(port, () => console.log(`oneway is listening on port ${port}`));
+
+Calculator(app);
